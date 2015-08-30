@@ -18,6 +18,9 @@
 		public static void main(String[] args){Note()//생성자}
 		public class MyExit extends WindowAdapter{}
 	}//Note class End
+PPT문서 13장 문서 보셔요 427페이지 참고
+http://developer.android.com/reference/android/widget/Button.html
+
 
 3. 쓰레드 = Thread = 실
 1)쓰레드 구현목적은 무한루프 처리하면서 다른처리
