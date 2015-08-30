@@ -1,0 +1,80 @@
+3주-추상클래스, interface, this, super, 생성자, io처리
+
+생성자=constructor, new연산자 다음에 오는 클래스이름( ) 
+      Son      tom = new Son( )
+      Father   john = new Father( )
+
+class Father{
+   public void  Father( ){ }//기본생성자가 아님, void없어야함
+   public  Father( ){ }//기본생성자=생략가능함
+   //생성자는 클래스이름과 동일, 리턴값없어도 void생략
+   //new연산자 다음에  클래스이름( ) 
+   //함수=메소드도 이름중복=OverLoading=오버로딩
+   //생성자도 오버로딩이 가능
+}//class END
+
+this키워드 현재클래스를 가르켜요.
+this키워드는 현재클래스의 멤버필드, 멤버메소드=함수에 접근
+만약에 상속을 받으면 부모껏도 this키워드 접근가능해요
+그런데 static키워드가 있는 상태에서 this사용하면 에러발생
+
+super키워드는 상속해준 부모클래스만 가르켜요
+this키워드와 마찬가지로 부모의 멤버필드, 메소드에 접근
+super생성자는 맨처음에 기술해야 에러없어요. super( "내용" ) 
+
+class Father { public void bank( ){ 300억있다} }
+
+class Son extends Father { 
+  public void bank( ){5만원} 
+  public void game( ){ 
+          WOW게임중...super.bank( )부모함수호출
+          WOW게임중...this.bank( )자식함수호출
+  } 
+}//Son클래스 end
+
+
+생성자=constructor, new연산자 다음에 오는 클래스이름( ) 
+
+io처리 키보드에서 입력=> Scanner
+         화면모니터출력=> System클래스.out.println( )
+         파일에 데이타출력=> File, PrintWriter클래스
+
+일반함수Non-static  public void star( ){ }
+                           public String book( ){return "몽블랑";}
+
+정적함수 static        public static void nemo( ){  }
+
+추상함수abstract     public abstract  void study( );
+클래스메소드=정적함수 static  =>PDF 10장 29페이지
+  
+ http://docs.oracle.com/javase/7/docs/api/
+ java.io팩키지(왼쪽상단)
+    |--왼쪽하단 File클래스=> constr
+    |--왼쪽하단 PrintWriter클래스=> constr                  
+
+ http://docs.oracle.com/javase/7/docs/api/
+ java.awt팩키지(왼쪽상단)
+    |--왼쪽하단 Frame클래스
+                   조상관계
+
+
+                        
+  class  Car자동차 {
+         private  String color; //필드=속성=field 자동차색상
+         private  int year; //필드=속성=field년식
+
+         public  void  move( ){ } //메소드=액션=함수=기능
+         public  void  stop( ){ }  //메소드=액션=함수=기능
+         public  void  start( ){ } //메소드=액션=함수=기능
+ } //class END
+
+
+
+
+
+
+
+
+
+
+

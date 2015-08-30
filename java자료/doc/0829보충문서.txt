@@ -1,0 +1,90 @@
+4주-AWT, AWT이벤트 ,Vector, ArrayList, Thread, 문자열
+
+1. 문자열 자바에서 문자열은  String클래스 ==>Two.java응용
+   String jumin="841224-1528913"; 
+   1) char  charAt(숫자) =>성별   jumin.charAt(7)
+   2) String  substring(시작, 끝+1) =>중간에 문자열가져오기
+                substring(시작) => 시작위치부터 마지막까지
+  3) 배열의길이 length필드, 문자열의길이 length( )
+      Vector클래스나, ArrayList클래스 길이는 size( )
+
+  4) String valueOf( int/double )
+  5) replace(구, 바꿀문자)
+
+  6) String a = new String("사과") 
+     String b = new String("사과") 
+    if(a==b){  }대신 if(a.equals(b)){ } 
+
+2. 쓰레드=Thread=실
+  1) 쓰레드구현목적은 무한루프 처리하면서 다른처리
+  2) Thread클래스상속 받아서 
+      public void run( ){  while(true){ 숫자출력 }   }
+  3) run함수를 호출할때는 start( )메소드 반드시 호출
+   public class Game {
+      public static void main(String[ ] args) {
+          첫번째구현 정찰 while(true){ 정찰 } 무한루프라서 아래코드에러
+          두번째구현 공격 문법의에러 unrea~~   에러 
+          세번째구현 수비
+      } //end
+   }//class END
+
+
+3. Vector, ArrayList 개체처리 
+   배열은 같은타입만 처리 , 배열은 크기가 고정
+   int[ ] chatt = new int[ ]; //크기생략하면 에러
+   chatt[0]=23.4;     chatt[1]=27;     chatt[2]=true ;  
+   
+   //chatt[3]="blue";    chatt[4]=17;     chatt[5]=false ; 
+   네트워크에서 동기화처리관련 Vector
+   데이타베이스관련 데이타처리는 ArrayList
+   ArrayList  list = new ArrayList( ); 배열은 아니죠
+   list.add("sky");     list.add(27);      list.add(true); 
+   for(int i=0; i<list.size( ); i++) {  list.get(i); }  
+
+4. awt=abstract window toolkit =>java.awt팩키지
+   awt+액션=이벤트 => java.awt.event팩키지
+
+  자바기초의결과는 콘솔  public static void main(String[ ])
+  awt결과는 윈도우창=Frame  public static void main(String[ ])
+  안드로이드는 틀=Activity  public void onCreate(Bundle) 
+ awt구현      class Note  extends Frame { 메인함수 }
+ android구현 class Note  extends Activity { onCreate함수 }
+
+ http://docs.oracle.com/javase/7/docs/api/
+ java.awt팩키지(왼쪽상단 2번째)
+    |--왼쪽하단 Frame클래스
+    Frame클래스는
+     A Frame is a top-level window with a title and a border.                  
+
+5. 자바에서 io처리
+   1) Scanner생성자( System.in ) => <input type=text >
+   2) File생성자(path) 
+   3) PrintWriter =>자바2에서 사용합니다   
+
+6. 자바상속
+  1) class  Son  extends Father{ } 
+      class  Son  extends Father, Mother{ } 문법의에러
+    자바 상속명시를 하나만 할수 있어요
+   
+ 2) interface상속받으면 무조건 추상메소드 재정의
+   java.awt.event팩키지 WindowListener인터페이스 =>7개
+   java.awt.event팩키지 ActionListener인터페이스 =>1개
+
+import java.awt.Frame;
+class Note extends  Fram{
+   //생성자, this,  내부클래스 
+}//class END
+
+import java.awt.Frame;
+import java.awt.event.WindowListener;
+class Note extends  Fram implements WindowListener{
+  //WindowListener인터페이스껏 7개추상메소드 재정의
+}//class END
+
+
+
+
+
+
+
+

@@ -3,12 +3,12 @@
   http://mgr.eduitbank.com/
 
 1주-출력,변수,상수,연산,제어,반복, 형변환, new, static
-2주-입력, 함수, 배열, try~catch, 상속
+2주-입력, 함수, 배열, try~catch, 상속 
 3주-추상클래스, interface, this, super, 생성자, io처리
 4주-AWT, AWT이벤트 ,Vector, ArrayList, Thread, 문자열
 
 시작버튼=>모든프로그램밑에 네모난박스에 
-강사컴퓨터ip주소: \\192.168.44.10
+강사컴퓨터ip주소: \\192.168.44.33
     Mtest폴더 my0230폴더선택후 더블클릭  
 
 C:\Mtest\my0900오전반은 건드리지 마세요
@@ -16,6 +16,88 @@ C:\Mtest\my0900오전반은 건드리지 마세요
 C:/Mtest/my0230/eclipse/eclipse.exe-0801더블클릭
 Workspace작업폴더 C:/Mtest/my0230 이미 선택되어있음
 
+File -> new => Project... Java project선택하세요
+ Day0830
+  |-src=> 오.버=> new=> package
+    |-it.bank.day30=> 오.버=> new=> class=> First , main함수 체크하셔요
+       |-First.java=>File메뉴 Save As...Two
+       |-Two.java=>File메뉴 Save As...????
+
+PPT문서 427페이지참고
+http://developer.android.com/reference/android/widget/Button.html
+_________________________________________________________________________________
+File -> new => Project... Java project선택하세요
+ Day0829
+  |-src=> 오.버=> new=> package
+    |-it.bank.day29=> 오.버=> new=> class=> First , main함수 체크하셔요
+       |-First.java=>File메뉴 Save As...Two
+       |-Two.java=>File메뉴 Save As...Gugudan
+
+    구구단io처리 한번 실습
+     interface=> 추상메소드, 상속키워드 implements, 
+                     상속시 반드시 추상메소드를 재정의
+     this키워드=>현재클래스를 가르키는 키워드, 상속시 부모까지 가르킴 
+
+____________________________________________________________________
+File -> new => Project... Java project선택하세요
+ Day0823
+  |-src=> 오.버=> new=> package
+    |-it.bank.day23=> 오.버=> new=> class=> First , main함수 체크하셔요
+       |-First.java=>File메뉴 Save As...Two
+       |-Two.java=>File메뉴 Save As...Father
+       |-Father.java=> 멤버필드=속성,  생성자, 메소드=기능=함수
+
+
+
+______________________________________________________________________________
+File -> new => Project... Java project선택하세요
+ Day0822
+  |-src=> 오.버=> new=> package
+    |-it.bank.day22=> 오.버=> new=> class=> First 
+       |-First.java=>File메뉴 Save As...Test
+       |-Two.java=>File메뉴 Save As...Three
+       |-Three.java=> public void study( ); =>추상클래스 
+       |-My.java  상속  implements Game
+       |-interface  Game { }
+       |-Test.java => 
+
+
+
+
+
+   http://docs.oracle.com/javase/7/docs/api/
+       java.awt팩키지(왼쪽상단)
+          |--Frame클래스왼쪽하단 
+
+
+____________________________________________________________________
+File -> new => Project... Java project선택하세요
+ Day0809
+  |-src=> 오.버 => new => package
+    |-it.bank.day09 => 오.버=> new => class => First  
+       |-First.java ==>File메뉴 Save As...Seven
+       |-Two.java=>  static/main함수/ String[ ]배열확인 
+       |-Three.java=>  형변환
+       |-Seven.java=>  try{ ~}catch(Exception ex){  }
+       |-Gugudan.java=>File메뉴 Save As...Last
+       |-Last.java=>  getDan( ), test( ) 두개메소드로 쪼개분리
+
+
+   http://docs.oracle.com/javase/7/docs/api/
+       java.lang팩키지(왼쪽상단)
+          |--String클래스왼쪽하단 
+          |--Integer클래스왼쪽하단 
+
+______________________________________________________________________________
+File -> new => Project... Java project선택하세요
+ Day0808
+  |-src=> 오.버 => new => package
+    |-it.bank.day08 => 오.버=> new => class => First  
+       |-First.java ==>File메뉴 Save As...Seven
+       |-Two.java=> try~catch 
+       |-Three.java=> 배열연습
+       |-Seven.java=> 함수 =>리턴값 연습
+___________________________________________________________________
 [이클립스에서 자바프로젝트 생성]
 File -> new => Project... Java project선택하세요
  Day0802

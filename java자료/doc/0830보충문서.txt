@@ -1,0 +1,82 @@
+1. 자바에서 상속 명시는 하나만 지정해야 합니다 
+   class Father{  } 
+   class Mother{  } 
+   interface Brother{  }  브라더 인터페이스에  9개 메소드 있음  
+   interface Sister{  }  시스터 인터페이스에는 3개 메소드 있음
+
+class  Son  extends  Father,  Mother{  } 문법의에러
+class Mother implements Brother{ 9개 메소드 재정의  }
+
+class  Son  extends Father{
+    public class MyExit  extends Mother{ 9개 재정의안해도되죠  }
+} //Son아들 class END
+
+//class WindowAdapter는  WindowListener인터페이스상속
+class  Note  extends Frame {
+     public Note( ){ }
+     public static void main(String[] args){  Note()생성자 }
+    public class MyExit  extends  WindowAdapter{  }
+} //Note class END
+
+PPT문서  13장문서 보셔요 427페이지참고
+http://developer.android.com/reference/android/widget/Button.html
+
+
+ http://docs.oracle.com/javase/7/docs/api/
+ java.awt.event팩키지(6번째 팩키지 왼쪽상단)
+    |--왼쪽하단 WindowAdapter클래스
+  
+                 
+2. 문자열 자바에서 문자열은  String클래스 ==>Two.java응용
+  int        indexOf("-") =>문자열의 위치 	
+  String    substring(시작) => 시작위치부터 마지막까지
+  trim( )
+  String valueOf( int/double )
+   
+3. 쓰레드=Thread=실 
+  1) 쓰레드구현목적은 무한루프 처리하면서 다른처리
+  2) Thread클래스상속/Runnable상속 ==> java.lang팩키지 
+      public void run( ){  while(true){  }   }
+  3) run함수를 호출할때는 start( )메소드 반드시 호출
+   public class Game   implements  Runnable {
+      public static void main(String[ ] args) {
+          Game gg = new  Game( );
+          Thread  tr  = new  Thread(gg); =>java.lang팩키지 
+          tr.start( );
+          세번째처리 
+      } //end
+
+      public void run( ){  while(true){  정찰  }   }
+  }//class END
+
+
+4. Vector, ArrayList 개체처리 
+   배열은 같은타입만 처리 , 배열은 크기가 고정
+   배열을 다른형태로 출력 향샹된 for반복문으로 출력   
+   for(int temp : 배열이름) {  System.out.println(배열이름 ); }
+
+   네트워크에서 동기화처리관련 Vector
+   Vector<String>  list = new Vector<String>( ); 배열은 아니죠
+   list.add("sky");     list.add("27");      list.add("true"); 
+   for(int i=0; i<list.size( ); i++) {  list.get(i); }  
+
+  Iterator it = list.iterator( );
+  while(it.hashMore( )==true){  it.next( ) }
+
+5. 형변환, Map
+  Map<Integer, String>  mp = new HashMap<Integer, String>( );
+    mp.put(1200, "aaa") ;
+    mp.put(2300, "bbb") ;
+    mp.put(4500, "ccc") ;
+  Set set =  mp.keySet( );
+  Iterator it2 = set.iterator( );  while반복문으로 출력 
+
+
+
+
+
+
+
+
+
+

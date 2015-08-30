@@ -1,0 +1,112 @@
+  강사컴퓨터ip: 192.168.44.33
+
+ 1주-출력,변수,상수,연산,제어,반복, 형변환, new, static
+ 2주-입력, 함수, 배열, try~catch, 상속
+ 3주-추상클래스, interface, this, super, 생성자, io처리
+ 4주-AWT, AWT이벤트 ,Vector, ArrayList, Thread, 문자열
+
+
+class  Two  { //일반클래스
+  public static void main(String[ ] args) { //static정적함수
+    star( )함수/nemo( )함수 호출
+  }
+  public void star( ) { 중첩for별찍기 } //Non-static일반함수
+  public static void nemo( ) { for#찍기 } //static정적함수
+}//class END
+
+abstract class  Three  { //추상클래스 abstract키워드=짬뽕
+   //추상메소드가 하나라도 있으면 자동 추상클래스입니다 
+   public  abstract void  study( ); //함수를 선언만=추상메소드
+   public String book( ){ return "몽블랑"; } //Non-static일반함수
+   public static void nemo( ) { for#찍기 } //static정적함수
+   public void star( ) { 중첩for별찍기 } //Non-static일반함수
+}//class END
+
+class Father { //Father부모클래스
+   public void  bank( ) {  300억있다 }
+}//class END
+
+class Son  extends   Father { //Son자식클래스
+   public static void main(String[ ] args){  }
+   public void  game( ) {  //Non-static일반함수
+      WOW시뮬레이션전략;  bank( )호출
+  } //end
+}//class END
+
+
+class  Two  { //일반클래스
+  public static void main(String[ ] args) { //static정적함수
+    star( )함수/nemo( )함수 호출
+  }
+  public void star( ) { 중첩for별찍기 } //Non-static일반함수
+  public static void nemo( ) { for#찍기 } //static정적함수
+}//class END
+
+
+abstract class  Three  { //추상클래스 abstract키워드=짬뽕
+   //추상메소드가 하나라도 있으면 자동 추상클래스입니다 
+   public  abstract void  study( ); //함수를 선언만=추상메소드
+   public String book( ){ return "몽블랑"; } //Non-static일반함수
+   public static void nemo( ) { for#찍기 } //static정적함수
+   public void star( ) { 중첩for별찍기 } //Non-static일반함수
+}//class END
+
+//추상메소드가 하나라도 있으면 자동 추상클래스
+//추상메소드들만 구성된것을 interface
+  src
+    |-it.bank.day22=> 오.버=> new=> interface
+
+interface  Game  { //인터페이스=쇼핑목록=명세표
+   //추상메소드로만 구성, abstract키워드 생략가능
+   //인터페이스상속받으면 반드시 재정의=OverRiding
+   public  abstract void  android( ); //추상메소드
+   public  abstract int price( ); //추상메소드
+   public  abstract String book( ); //추상메소드
+}//interface  END
+
+
+
+자바에서 클래스 상속 키워드 extends
+자바에서 interface 상속 키워드 implements
+인터페이스 상속받으면 전부 재정의=Overriding
+
+Class A{ } Class B{ }  Class C{ }
+interface  Game{ }  interface  Computer{ }
+
+class My  extedns  A  {  } 에러없어요
+class My  extedns  A,B,C  {  } 클래스는 한꺼번에 다중상속명시X
+
+Class  My   {
+  //함수=메소드이름이 동일=>함수의중복=OverLoading
+  public void bank(String name){ }
+  public void bank(String name, double rate){ }
+  public void bank(String name, double rate, String pos){ }
+  
+   //My클래스 선택후,  마우스 가져다 놓으면 => add unimplement선택 
+   //Game인터페이스 추상메소드 함수재정의=Override
+   //10장 PDF문서 20페이지 => Overriding/OverLoading
+}//end
+
+
+
+
+
+ http://docs.oracle.com/javase/7/docs/api/
+ java.lang팩키지(왼쪽상단)
+    |--왼쪽하단 String클래스 => Method => indexOf메소드
+                                                         substring메소드
+                                                         valueOf메소드                                                          
+
+ http://docs.oracle.com/javase/7/docs/api/
+ java.awt팩키지(왼쪽상단)
+    |--왼쪽하단 Frame클래스
+                   조상관계
+
+
+
+
+
+
+
+
+
