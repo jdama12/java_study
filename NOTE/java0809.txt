@@ -1,0 +1,54 @@
+두번째 static키워드가 있으면  == 진짜 중요
+클래스이름.메소드(); 직접접근이 가능해요
+
+nemo메소드는 Test.nemo();접근해요
+star메소드는 Test.star();접근하면 에러발생
+star()메소드는 어떻게 접근해야 하나요?
+
+Test ob = new Test();
+ob.star();
+
+public class Test {
+	public static void nemo() {}//static 정적함수
+	public void star() {}//Non-static 일반함수
+}
+
+http://docs.oracle.com/javase/7/docs/api/
+java.lang팩키지(왼쪽상단)
+	|--String왼쪽하단
+
+int, double, char, boolean=표준타입=primitiveType
+컴파일 할때 자동으로 인식되는 타입
+그런데 String은 클래스 입니다.
+
+	double avg = 78.9; //8Byte
+	String data = "1200";
+	int a = (int)avg; //int형은 4Byte
+	int b = (int)data; //에러입니다.
+	int b = Integer.parseInt(data);
+	Integer클래스에 parseInt형은 static키워드 있음
+
+함수의 매개인자 연습
+
+	bank("KB국민은행", 7.8);
+	//함수 이름 중복 = overLoading
+	public void bank() {};
+	public void bank(String name) {};
+	public void bank(String name, double rate) {};
+
+자바에서 배열은 []
+배열은 같은 타입으로만 구성, 배열의 사이즈크기는 고정
+	int kor = 85, eng = 90, sum = 0, sub = 0, mok = 0;
+	int[] su = new int[3];
+	String[] city = {"시청", "수원", "안양", "종로"};
+	int[] lotto = {42, 5, 29, 34, 17, 23};
+배열의 길이 length, 배열은 0번째부터 시작
+배열의 크기가 고정이라서 for반복으로 출력
+
+for(int i = 0; i < lotto.length; i++) {
+	System.out.print(lotto[i] + " ");
+}
+
+for(int temp : lotto) {//향상된 for
+	System.out.print(temp + " ");
+}

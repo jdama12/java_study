@@ -1,0 +1,77 @@
+
+아이티뱅크 출석체크를 위해서 수강동의 
+  http://mgr.eduitbank.com/
+
+
+강사컴퓨터ip주소: \\192.168.44.10
+C:\Mtest\my0900오전반은 건드리지 마세요
+ 
+C:/Mtest/my0230/eclipse/eclipse.exe-0801더블클릭
+Workspace작업폴더 C:/Mtest/my0230선택됨
+
+[이클립스에서 자바프로젝트 생성]
+File -> new => Project... Java project선택하세요
+ Day0801
+  |-src=> 오.버 => new => package
+    |-it.bank.day01 => 오.버=> new => class => First  
+       |-First.java ==>File메뉴 Save As... Last
+       |-Two.java   
+ 
+	
+자바언어의 특징 5가지 
+ 1. 자바는 대소문자 구별합니다
+   String맞음 , string틀림
+   String name="홍길동" ; //설명주석
+ 
+ 2. 자바는 문장 마지막에 세미콜론찍어요 ; 
+ 3. 자바에서 한줄주석은 //설명
+ 4. 자바는 class작업니다.
+   클래스이름과  저장이름이 동일
+  public class Test { } Test.java정답
+  public class Test { } test.java에러
+  public class Test { } Game.java에러
+   
+5. 자바에서 출력은 
+  System.out.println(  ); 라인개행=enter기능
+    String name="홍길동" ; 
+  System.out.println( "안내문"  +   name );
+  System.out.println( "이름=홍길동" ); 
+
+  int kor=90; //int=4Byte=32bit=소숫점없는정수
+  double avg=34.5; //double=8Byte=64bit=소숫점실수
+  char grade='B'; //싱글로 한글자 표현
+  String msg="안내문" ; //더블로 문자열표현
+
+  자바에서 문자열 String "  " 
+       String juso="종각역"; 
+
+  자바에서 문자   char  ' '
+	char grade='B';
+
+  자바에서 숫자정수형  int
+	int kor=90;
+
+  자바에서 숫자실수형  double
+	double  avg = 78.9; 
+
+자바프로그램을 하기위해서 JDK설치=툴=>이미 설치되었어요
+자바소스를 작성할 편집기를 설치 이클립스
+
+ 시작 => 컴퓨터=>오.버 => 속성
+ 윈도우탐색 C:\Program Files \ Java클릭 \jdk폴더,jre폴더
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+

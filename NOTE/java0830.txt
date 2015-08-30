@@ -1,0 +1,79 @@
+1. 자바에서 상속 명시는 하나만 지정해야 합니다.
+
+	class Father{}
+	class Mother {}
+	interface Brother {} //브라더 인터페이스에 9개 메소드 있음
+	interface Sister {} // 시스터 인터페이스에는 3개 메소드 있음
+
+	class Son exteds Father, Mother {} //문법에러
+	class Mother implements Brother {//9개 메소드 재정의}
+
+	class Son extends Father {
+		public class MyExit implements Brother {//9개 재정의}
+	}//Son아들 class End
+
+	//class WindowAdapter는 WindowListener인터페이스 상속
+	class Note extends Frame {
+		public Note() {}
+		public static void main(String[] args){Note()//생성자}
+		public class MyExit extends WindowAdapter{}
+	}//Note class End
+
+3. 쓰레드 = Thread = 실
+1)쓰레드 구현목적은 무한루프 처리하면서 다른처리
+2)Thread클래스 상속/Runnable상속 ==> java.lang팩키지
+	public void run() {while(true){}}
+3)run함수를 호출할때는 start()메소드 반드시 호출
+public class Game implements Runnable {
+	public static void main(String[] args) {
+		Game gg = new Game();
+		Thread tr = new Thread(gg); ==> java.lang팩키지
+		tr.start();
+		//세번째처리
+	}//End
+	public void run() {while(true) {정찰}}
+}//class End
+
+4. Vector, ArrayList 개체처리
+배열은 같은타입만 처리, 배열은 크기가 고정
+배열을 다른형태로 출력 향상된 for 반복문으로 출력
+for(int temp : 배열이름) {System.out.println(배열이름);}
+
+내트워크에서 동기화처리관련 Vector
+Vector list = new Vector(); //배열은 아니죠
+list.add("sky"); list.add(27); list.add(true);
+for(int i = 0; i < list.size(); i++) {list.get(i)}
+Iterator it = list.iterator();
+while(in.hashMore() == ture){it.next();}
+
+5. 형변환, Map
+Map < Integer, String > mp = new HashMap < integer, String > ();
+mp.put(1200, "aaa");
+mp.put(2300, "bbb");
+mp.put(4500, "ccc");
+
+Set set = mp.keyset();
+Iterator it2 = set.iterator(); //while반복문으로 출력
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

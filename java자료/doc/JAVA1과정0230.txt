@@ -1,0 +1,687 @@
+
+아이티뱅크 출석체크를 위해서 수강동의 
+http://mgr.eduitbank.com/
+____________________________________________________________________________________________
+
+1주-출력,변수,상수,연산,제어,반복, 형변환, new, static
+2주-입력, 함수, 배열, try~catch, 상속
+3주-추상클래스, interface, this, super, 생성자, io처리
+4주-AWT, AWT이벤트 ,Vector, ArrayList, Thread, 문자열
+
+[자바JDK 관련사이트]
+ 첫번째 jdk찾는방법
+ http://www.oracle.com =>DownLoads =>JAVA SE클릭=> JavaSE
+
+[이클립스 다운로드]
+http://www.eclipse.org =>DOWNLOAD버튼클릭 =>J2EE첫번째항목
+
+http://docs.oracle.com/javase/7/docs/api/
+java.lang팩키지(왼쪽상단)
+   |--System 
+   |--String 
+
+강사컴퓨터ip주소: 192.168.44.10
+시작 => 모든프로그램하단 
+        비어있는 네모난박스 => \\192.168.44.10
+
+작업폴더  C:/Mtest/my0230오후반
+================ JAVA1 =====================
+[이클립스설치  C:/Mtest폴더/my0230에 설치하세요]
+C:/Mtest/my0230/
+  eclipse-jee-luna-SR1-win32-x86_64.zip파일선택후
+  =>오른쪽버튼 => 여기에 압축풀기
+  eclipse폴더/eclipse.exe보라색 => 오.버=>바로가기 만들기 
+
+eclipse.exe-바로가기 선택후  
+ =>오.버 이름바꾸기  eclipse.exe-0801=>더블클릭후
+작업폴더workspace는   C:/Mtest/my0230 브라우저... 선택하세요(한번만)
+
+
+[이클립스에서 자바프로젝트 생성]
+File -> new => Project... Java project선택하세요
+ Day0801
+  |-src=> 오른쪽버튼 => new => package
+    |-it.bank.day04 => 오른쪽버튼 => new => class => First  
+       |-First.java ==>  출력 ,  아래중간에 main함수체크 
+ 
+
+_________________________________________________________________________________________________________________________________
+[이클립스 환경설정]
+이클립스 window메뉴 => 맨마지막 preperences...
+1번째General -> Appearance
+      Color and Fonts=>중앙에 Basic => Text Font 
+      Edit...버튼클릭해서  (같은글꼴로 하세요 에러찾기 편해요)
+      글꼴: Consolas    스타일: 굵게   크기:16
+
+6번째Java -> Editor => Syntax Coloring   
+       화면중앙에 제목: Element  => java 
+        classes  오른쪽에  Enable체크  red색체크  
+        interfaces  오른쪽에  Enable체크  red색체크 
+
+[이클립스 view창보기 ]
+window메뉴-> Show View에서
+     Package Explorer  (왼쪽 프로젝트 탐색 창)
+     Console선택=>결과가 나오는 창 
+     Problems선택(other... General에서 Problems선택)
+
+
+==========================First.java============================
+public class  First {
+   public static void main(String[ ] args){
+	System.out.println("이름=홍길동");
+	System.out.println("나이=23");
+   } //main end
+} //class END
+
+
+==========================Two.java============================
+public class  Two {
+ public static void main(String[] args)  	{
+	int  kor=90 ,  eng=85 ,   sum=0 ;
+	double  avg =0.0 ; 
+
+	sum = kor + eng ;
+	avg=(double)sum/2;  
+
+	System.out.println("국어="+kor);
+	System.out.println("영어="+eng);
+	System.out.println("총점="+sum);
+	System.out.println("평균="+avg); 
+  } //main end
+} //class END
+
+
+
+==========================Three.java=====================================================
+public class  Three {
+ public static void main(String[] args)  {
+	int  kor=90 ,  eng=85 ,   sum=0 ;
+	double  avg =0.0 ; 
+	String  msg= "메세지"  ;
+
+	sum = kor + eng ;
+	avg=(double)sum/2; 
+		
+        //평균에 따라 조건=if처리 
+        if( avg == 100) {msg="100만점 보너스지급"; }
+        else if ( avg >= 70)  {  msg="시험 합격입니다"; }
+        else  {  msg="재시험 보셔야 합니다"; } 
+
+	System.out.println("국어="+kor);
+	System.out.println("영어="+eng);
+	System.out.println("총점="+sum);
+	System.out.println("평균="+avg);
+	System.out.println( msg);
+    } //main end
+} //class END
+
+
+/*
+미녀는석류를 좋아해, static은 static만좋아해
+static키워드는 this싫어해요
+this키워드는 
+현재클래스의 Non-static멤버접근, 상속받으면 부모껏 Non-static멤버접근
+
+ Non-static일반함수는 static정적함수에서 참조할때는
+ Father john = new Father( );
+ john.bank( ); 
+ static키워드가 있으면 클래스이름.메소드( ) 직접접근이 가능해요 
+*/
+
+=========================================================
+[자바 특수문자=Escape 반드시 "\글자" ]
+1) "\n"  라인개행
+2) "\t"  tab키
+3) "\b"  backspace키
+4) "\\"   \표시할때 
+5) "\a"   특수문자는 없어서 에러 
+6) "\m"  특수문자는 없어서 에러
+
+==========================Four.java=====================================================
+ public class  Four  {
+	public  static  void  main(String[ ] args ) {
+		int  kor=90, eng=85 , sum=0 ;  
+		sum=kor + eng ;  
+	
+		System.out.println(   ) ;//단순라인개행 
+        		System.out.print( "금수강산111\t" ) ;
+		System.out.print( "좋은사람222\t" ) ;
+		System.out.print( "겨울왕국333\t" ) ;
+		
+		System.out.println("\n성적처리"  ); 
+		System.out.println("국어\t영어\t총점") ;
+		System.out.println( kor +"\t" + eng +"\t" + sum ) ;
+	} //main 
+ } //class END
+
+============================기초문법설명=======================================
+[자바에서  연산자 종류 ]
+산술   + - *  /  %
+관계   >  <  ==  !=  >=  <=
+논리   &&  ||   !
+단항   ++  --
+대입  +=   *=
+
+  int a=4, b=4 ;
+  int sum1=0, sum2=0 ; 
+  a++;  //단항연산  주석처리하세요
+  b++;  //단항연산  주석처리하세요
+  sum1 = (a++) + 3 ;  
+  sum2 = (++b) + 3 ;  
+  System.out.println( "a=" + a +"\t sum1=" + sum1 );
+  System.out.println( "b=" + b +"\t sum2=" + sum2 );
+
+int x=20, y=7 ;
+int add=0, sub=0, gob=0, mok=0, div=0 ;  //구분할때는 콤마로 하세요 
+add = a+b ; 
+sub = a-b ; 
+gob = a*b ; 
+mok = a/b ; 
+div = a%b ; 
+
+boolean  tr =  x>y ;
+boolean  fr=  x != y ;
+System.out.println( "결과=" +  tr   );
+System.out.println( "결과=" +  fr   );
+----------------------------------------------------------------------------------------------------------------------------------
+[자바에서 제어문 - if, switch ]
+if문형식]
+  String ret="" ;  //꼭 선언하세요 안하면 에러발생합니다.
+    if( avg>=70  )  {  ret="합격" ;  }
+
+    if( avg>=70  )  {  ret="합격" ; }
+    else {  ret ="재시험" ;   } 
+
+    평균점수에 따라서 비교  학점구하기 
+    char  grade='F';   //꼭 선언하세요 안하면 에러발생합니다.
+
+    if( avg>=90  )  {  grade='A' ;  }
+    else if ( avg>=80 ) { grade='B' ;  }
+    else if ( avg>=70 ) { grade='C' ; }
+    else if ( avg>=60 ) { grade='D' ; }
+    else { grade='F' ; } 
+	
+  switch(  (int)avg/10  ) {   //조건=int,char좋아해, double형에러발생
+    case 10:   grade='A' ;  break  ;
+    case 9:    grade='A' ;  break  ;
+    case 8:    grade='B' ;  break  ;
+    case 7:    grade='C ';  break  ;
+    case 6:    grade='D';  break  ;
+    default:   grade='F' ;  break  ;
+  }//switch End
+
+===================Last.java=================================================
+public class  Last  {
+   public static void main(String[] args) {
+	int  kor=90 ,  eng=85 ,   sum=0 ;
+	double  avg =0.0 ; 
+	char  grade ='F' ; 
+         	
+	sum = kor + eng ;
+	avg=(double)sum/2; 
+
+	    if( avg>=90  )  {  grade='A' ;  }
+	    else if ( avg>=80 ) { grade='B' ;  }
+	    else if ( avg>=70 ) { grade='C' ; }
+	    else if ( avg>=60 ) { grade='D' ; }
+	    else { grade='F' ; } 
+
+	System.out.println("국어="+kor);
+	System.out.println("영어="+eng);
+	System.out.println("총점="+sum);
+	System.out.println("평균="+avg);
+	System.out.println("학점="+grade);
+    } //main end
+} //class END
+
+
+===================Test.java=================================================
+public class  Test  {
+    public static void main(String[] args)  	{
+	  int  kor=90 ,  eng=85 ,   sum=0 ;
+ 	 double  avg =0.0 ; 
+ 	 char  grade ='F' ; 
+
+	 sum = kor + eng ;
+	 avg=(double)sum/2; 	
+
+	  switch( ( int )avg/10  ) {
+	    case 10:   grade='A';  break  ;
+	    case 9:    grade='A' ;  break  ;
+	    case 8:    grade='B' ;  break  ;
+	    case 7:    grade='C';  break  ;
+	    case 6:    grade='D';  break  ;
+	    default:   grade='F';  break  ;
+	  } //switch END
+
+	System.out.println("총점="+sum);
+	System.out.println("평균="+avg);
+	System.out.println("학점="+grade);
+    } //main end
+} //class END
+
+----------------------------------------------------------------------------------------------------------------------------------
+[자바에서 반복문 -for, while, do~while]
+1) for정확한횟수를 알고 있을때
+   int a=0 ;
+   for(int i=1 ; i<11 ; i=i+1  ) {
+          a++;  // 단항연산
+          System.out.print ( a + "  " ) ;  
+   }
+   
+2) 정확한횟수를 모를때
+   int b=0 ;
+   while( true ) { 
+      b++;  // 단항연산
+      System.out.print ( b + "  " ) ; 
+      if(b==10)break;  //꼭기술하세요 아니면 무한루프
+   }
+ 
+3) 조건에 상관없이 	1회처리한후 조건에 따라 반복문 처리
+    int c=0 ;
+   do { 
+        c++ ; // 단항연산
+        System.out.print ( c + "  " ) ; 
+   }while( c<10 )  ;  
+
+
+[보조제어문]
+break, continue 단독사용불가, 에러발생
+반드시  switch문에서 break 
+무한루프에서 조건을 주어서 break
+조건을 주어서 continue사용가능함
+
+[ new연산  & static 키워드 ]
+new연산자는  클래스를 메모리영역 heap=동적할당
+동적할당 = 실행중에 메모리영역확보해서 로드시킴
+new연산자로 클래스를 heap영역에 할당시키고, 필요없을때는 해제 
+static키워드는 정적영역=변하지는않는곳=계속유지되는곳 
+
+아래처럼 다양하게 new연산자로 개체생성후 메소드접근 
+Son  tom  = new  Son(  );
+Father  john  = new Father( "홍길동" ) ;
+Scanner stdin = new Scanner(System.in) ;
+//System.in의미는 키보드에서 데이타입력표준
+System.out.print("단 입력? " );
+int dan = stdin.nextInt( );
+
+http://docs.oracle.com/javase/7/docs/api/
+왼쪽상단 java.util팩키지
+왼쪽하단 Scanner
+
+_________________________________________________________________________________________________
+함수=method=메소드=function=procedure=처리 
+1) 함수는 무조건 public 으로 시작
+2) 함수는 리턴값이 있어야  하는데 없으면 void기술
+3) 함수는 함수이름다음에 괄호가 있어야 합니다 
+4) 함수는 필요한 경우 함수이름(  매개인자 ) {  }
+
+ public   void  star( ) { 코드기술  }  //Non-static함수=일반함수
+ public  static void  nemo( ) { 코드기술  }  //static함수=정적함수
+
+ public  String  book( ) { ~~ return "몽블랑" ; } 
+ public  int  price( ) { ~~ return 2300 ; }  
+ public  void  note( ) {  book( );  System.out.println("note( )함수" ) ;   }  
+ public  void  move(String home ) {  }  
+ public  int   hap(int a, int b) {  int c=a+b;  return c; }  
+  //Non-static=일반함수끼리 개체접근없이 바로 호출가능해요
+
+////////함수중복=OverLoading 매개인자갯수나 타입만 다름////////////
+////////함수이름동일,  괄호안의 매개인자갯수나 타입만 다름////////////
+ public  void  bank(  ) {  System.out.println("bank( ) 20억있당") ;   }
+ public  void  bank( String name ) {   }
+ public  void  bank( String name, double rate ) {   }
+ public  void  bank( String name, int count,  double rate ) {   }
+
+===================Game.java=================================================
+public class Game {
+	public static void main(String[] args) {
+	             Game.nemo( ) ;  //static정적함수는 클래스이름.메소드( ) 
+	             Game  gg = new  Game( ) ;  //gg는 지역변수보다는 개체=객체
+	             gg.star( ) ;
+	}//main end
+
+	public void  star( ){ //Non-static일반함수 
+	      System.out.println("void star( )메소드") ;
+	       for(int i=0;i<5;i++) {   
+		  for( int j=0;j<i+1;j++){ 
+		     System.out.print(" ★  "); 
+		  } //j end
+		  System.out.println( );
+	        } //i end
+	} //end
+	
+	public static void   nemo( ){ //static=정적함수
+	      System.out.println("void  static nemo( )메소드") ;
+	      System.out.println("#   #   #   #") ;
+	      System.out.println("#   #   #   #") ;
+	      System.out.println("#   #   #   #") ;
+	} //end
+} //class END=====================================
+
+
+[try~catch문 runtime에러 발생처리 ]
+	aaa처리=>문법에러없음
+              try{
+	  bbb처리=>문법에러없음=>실행중에 에러발생 =>멈춤
+	}catch(Exception ex) {  }
+	ccc처리=>문법에러없음
+              마지막처리=>문법에러없음
+
+
+public class Two {
+  public static void main(String[] args) {
+	int a=25, b=6, c=0, sum=0;
+	c=a/b; //여기에 예외처리 try{  }catch(Exception ex){ }
+	sum=a+b;
+	System.out.println("Two.java 11:08");
+	System.out.println(c + "=" + a + "/" + b); 
+	System.out.println(sum + "=" + a + "+" + b);  
+	System.out.println("Two.java 영수증출력");  
+   }//main end
+}//class END
+
+===================Gugudan.java=================================================
+//[try~catch문 runtime에러 발생처리 ]
+import  java.util.Scanner ;
+import  java.lang.*; //  기본임포트=생략가능 
+public class Gugudan {
+   public static void main(String[] args) {
+        int dan = 1 ;
+       Scanner  sc =  new  Scanner( System.in ) ; // 상단에 임포트 시키세요
+       System.out.print("단 입력?  ") ;
+           try{
+	  dan = sc.nextInt() ; //숫자대신 문자 입력하면 에러 발생해요
+                //dan=Integer.parseInt(sc.nextLine( ));
+	    for( int i=1 ; i<10 ; i++) {
+                System.out.println( dan + "*" + i + "=" + (dan*i)) ; 
+             }
+           }catch(Exception ex) {  }
+   }//main함수 끝
+} //class END ===================================================================================
+
+
+public class Game {
+  public static void main(String[] args) {
+	int  com = (int)(Math.random( )*100) +1;  //1~100사이 숫자
+	int  my=0;
+	System.out.println("컴난수=" + com );
+	Scanner  sc = new  Scanner(System.in) ;
+	int i=0 ;
+	while( true) {
+	   i++; 
+	   System.out.print( i +"번째 숫자입력? " ) ;
+	   my= sc.nextInt();
+	   if(my==com) { System.out.println("빙고정답입니다"); break; }
+	   if( i==5) break ;
+	} //while end
+  } //main end
+} //class END
+
+________________________________________________________________________________________________________________________________________________________________
+[자바에서 배열 ]
+첫번째 배열  무조건 같은 type이어야 합니다. 
+   type[ ] 배열 = new  type[갯수]
+두번째 배열 크기가 있어야 합니다.
+세번째 배열 길이는 필드  length
+네번째 배열 new연산자로 생성하고 메모리영역 heap에 할당 
+5번째 배열 출력 for반복문으로 합니다.
+
+ String[ ] juso = new String[3] ;
+ juso[0]="서울";    juso[1]="종로";     juso[2]="광화문"; 
+
+ double[ ] dd = new double[3] ;
+
+ int[ ] lotto = {  23,  45, 7, 14, 30, 42  };  //배열의 초기화
+
+
+===========================================================================
+[자바에서 생성자  ]
+생성자=Constructor=>Constr=>생성자도 중복가능
+생성자는 클래스이름과 동일합니다.
+생성자는 리턴값이 없어도 void없습니다.
+생성자는 개체 생성시 new연산자 다음에 기술
+생성자도 중복=OverLoading가능해요
+기본생성자는 생략이 가능해요
+
+ public class Father{ 
+    private int m=7800; //전역변수=field
+    public Father( ){  } //기본생성자 생략가능해요
+    public Father( String name){  } //생성자중복=OverLoading
+
+    public void bank( ){ //Non-static메소드
+      int m=2300; //지역변수
+      System.out.println("지역가격m="+ m) ;  //2300
+      System.out.println("전역가격m="+ m) ; //7800	
+    }//end  
+ }//class END
+
+
+===========================================================================
+자바에서 클래스 상속 extends
+자바에서 인터페이스 상속  implements
+인터페이스,추상클래스상속시 메소드 반드시 재정의=OverRiding
+인터페이스,추상클래스상속시 메소드  @Override 재정의표식
+
+public class  Father {
+    private  int pwd; //필드=field 
+    public Father(  ) {   } //기본생성자
+    public void bank( ) {  } //Non-static일반함수 
+}//Father class END
+
+class Son extends  Father{ 
+   public void game( ) {    
+       //this키워드는 현재자신클래스및 부모클래스접근가능
+        this.bank( ); //함수호출이 가능해요
+   }//end
+}//Son class END
+
+public  abstract class   Mother { //추상클래스==>생략함
+  //추상메소드가 하나라도 있으면 자동 추상클래스
+  //추상메소드+일반메소드+static메소드 
+   public static void nemo( ){ 내용기술  }//static메소드
+   public  int  card( ) {  내용기술 return 23000;  } //Non-static메소드 
+   public abstract  void house( ) ; //추상메소드
+}//class  END
+
+public interface Brother {
+  //interface는 추상메소드로만 구성 abstract키워드는 생략가능
+   public abstract  int   car( ) ;
+   public void  desk( ) ;
+   public String book( );
+}//interface END
+
+public class Family  implements  Brother {  
+  car,book,desk메소드재정의=Override 
+}//class END
+
+http://developer.android.com/index.html
+Develop클릭 => reference클릭 =>android.widget=>Button
+http://developer.android.com/reference/android/widget/Button.html
+
+http://docs.oracle.com/javase/7/docs/api/
+java.awt팩키지(왼쪽상단) ==> 안드로이드는 android.widget팩키지 
+   |--Frame (왼쪽하단  classes) ==> 안드로이드는 Activity
+   |--Button, TextArea, Color, Font, TextField, Panel 
+
+java.awt.event팩키지(왼쪽상단) 
+   |--ActionListener (왼쪽하단  interface) ==> 버튼클릭, 입력란enter
+   |--WindowListener(왼쪽하단 interface) ==> 윈도우동작 7개메소드 
+
+______________________________________________________________________________________________
+AWT (Abstract Windows Toolkit)
+    : GUI(Graphic User Interface)환경의 프로그램및 안드로이드 위젯과 비슷
+
+ 컴포넌트 :사용자 인터페이스를 구성하는 기본요소
+             버튼, 체크박스, 레이블, 텍스트필드, 리스트, 팝업메뉴와 같은 부속품의 총칭
+             자바에서는 component라는 클래스가 있는데 모든 컴포넌트들은 
+             이 Compont 클래스의 자손이다.
+ 컨테이너 : 컨테이너는 컴포넌트들이 붙어 있는 윈도우 같은 것
+             윈도우, 프레임, 패널, 다이얼로그 박스 등이 있다.  
+             (다른 컴포넌트를 담을수 있는 컴포넌트)
+ 레이아웃 : 컨테이너에 컴포넌트를 붙일때 어떤 식으로 배치하는가가 중요한데 
+              이것을 레이아웃이라 한다
+ 이벤트 : 사용자로부터 입력이 일어나는 것
+
+import   java.awt.*;
+import   java.awt.event.*;
+
+public class Note extends  Frame {
+    private  Button  btnExit  = new  Button("종료");
+
+   public  Note( ){ //생성자
+              this.setTitle("미니메모장");
+	this.setBounds(200, 200, 500, 450);
+	this.setBackground(Color.green);;
+	this.setVisible(true);//진짜 창 보여주기	
+   }//생성자 end
+
+   public static void main(String[ ] args){
+       Note  pad = new  Note( );
+   }//end
+} //class END
+
+___________________________________________________________________________________________________________________________________
+-----------------------------------------------------------------------------------------------------------------------------------
+자바에서 Thread
+1) 쓰레드는 Thread클래스, Runnable인터페이스 2종류
+2) 무한루프 구현처리는 public void run( ){  while(true){ }  } 
+3) run함수는 반드시 start( )메소드로 호출
+4) 자원의 공유으로 인해 충돌이 발생
+5) 쓰레드는 application실행중에 독립적인 처리 가능
+
+public class Game  extends Thread {
+  public static void main(String[ ] args){
+     Game gg = new  Game( );
+     gg.start( ); //run함수호출
+  } //main end
+
+  public void run( ){
+      while(true){ 무한루프처리  }
+  } //run end
+} //class END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===================UserServer.java=================================================
+import   java.lang.*; 
+import   java.net.*  ;
+import   java.io.*;
+
+public class  UserServer {    
+	public static void main(String[ ] args)   {
+	  try{
+		//순서1 - 서버소켓 생성 ====> Server생성 ===>먼저실행
+		ServerSocket  server  = new ServerSocket(1111);
+		System.out.println(" Server에서 접속 대기중...");
+
+		//순서2 - 접속한 유저를 허용=수락해서  소켓이 관리 
+		Socket  socket = server.accept( ) ;
+		/////////////////소켓이 모든것을 다 관리해요 /////////////////////////
+		
+		//순서3    접속한 주소를 표시 InetAddress이용
+		InetAddress   add  = socket.getInetAddress( ) ;
+		System.out.println( add + " client접속함 "); 
+
+		//순서4  소켓으로 접속한  InputStream/OutputStream 값 얻어오기
+		InputStream  is=  socket.getInputStream( ) ;
+		OutputStream  os = socket.getOutputStream( ) ;
+		
+		//순서5  while문을 통해서 소켓으로 받은 입/출력을 char로 주고받게함
+		InputStreamReader  isr = new  InputStreamReader( is ) ; //byte->character
+		BufferedReader   br = new  BufferedReader( isr ) ;//character->text
+		
+		while(true) {
+		  String  str = br.readLine( ) ;
+		  if(str==null) break ;
+		  System.out.println("client쪽 내용 : "  + str) ;
+		} //while END
+		  br.close( );    socket.close( ) ; 
+	}catch(Exception  ex) {   }
+  }// main END
+} //UserServer class END
+
+
+===================UserClient.java=================================================
+import   java.lang.*; 
+import    java.net.*  ;
+import    java.io.*;
+public class  UserClient {  //접속하는 client쪽 프로그램 시작
+	public static void main(String[ ] args)   throws Exception   {
+		try{
+		//순서1 ->서버 ip와 포트번호 
+		Socket  socket = new Socket("127.0.0.1", 1111) ;
+
+		//순서4  소켓으로 접속한  InputStream/OutputStream 값 얻어오기
+		InputStream  is =  socket.getInputStream( ) ;
+		OutputStream  os = socket.getOutputStream( ) ;
+
+		//순서5  while문을 통해서 소켓으로 받은 입/출력을 char로 주고받게함 
+		BufferedReader   br = new  BufferedReader( new InputStreamReader( is ) ) ;
+		PrintWriter   pw =  new  PrintWriter(  new OutputStreamWriter( os ) )  ;
+		BufferedReader   key = new  BufferedReader( new InputStreamReader( System.in ) ) ;
+		while(true) {
+			System.out.print("메세지: " ) ;
+			String data= key.readLine( ) ;
+			if(data == null) break ;
+		   //Client쪽에서 서버로  내용보냄
+			pw.println( data );  		  pw.flush( ) ;
+		} //while END
+		key.close( ) ;  br.close( );  pw.close( ) ;  socket.close( ) ; 
+		} catch(Exception  ex) {   } 
+	}//main END
+} // class END
+
+===================Lotto.java[ 로또 배열 - 참고]=================================================
+public class Lotto {
+  public static void main(String[ ] args) {
+        int[ ]  lotto = new  int[6] ;
+        lotto[0]=34;  lotto[1]=44;   lotto[2]=7; 
+        lotto[3]=15;  lotto[4]=29;   lotto[5]=3; 
+        for(int c=0; c<lotto.length; c++){ 
+               System.out.print( lotto[c] +"   ") ;
+         } //c end
+  } //main end
+} //class END
+
+
+[난수로 발생 로또 숫자 발생]
+for(int a=0; a<lotto.length ; a++){
+	lotto[a] = (int)(Math.random()*45)+1 ; //난수 
+	   for(int b=0 ; b<a ; b++){
+	   if(lotto[a] == lotto[b]) {  a--;  } //중복체크 
+	   }// for b end 
+} //for a end
+	
+for(int  temp:lotto) { System.out.print( temp +"\t") ;	}
+
+
+[소트로직]
+System.out.println("\n작은숫자부터 배열출력");
+for(int a=0; a<lotto.length; a++){
+ for(int b=a+1 ; b<6 ; b++){
+   if(lotto[a] > lotto[b]){
+	int temp ;
+	temp = lotto[a] ;
+	lotto[a] = lotto[b];
+	lotto[b] = temp; 
+    }
+  } //b end
+} //a end
+
+

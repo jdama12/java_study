@@ -1,0 +1,73 @@
+1. static키워드=정적 
+	자동으로 메모리에 로드되는 함수=메소드 main함수는
+	반드시 꼭  static키워드 있어야 합니다
+
+	static=기관사 = 비행기 기장 = 버스 운전사
+	static 아닌함수,필드를 Non-static = 일반
+	Non-static = 학생 = 고객 = 승객 = 지하철이용하는 우리들 
+	static키워드가 있으면 클래스이름.메소드( ); 직접접근
+
+2. new연산자는  클래스를 개체화시켜 동적할당
+	동적할당은 실행중에 메모리heap영역에 할당
+	class Two {  public void game( ){ 70라인기술}  }
+	class User {  Two클래스에 있는 game( )함수호출 }
+
+	PDF 2장 34페이지 class  KeyboardInput2{ 코드기술 }
+	Scanner  stdIn = new Scanner(System.in) ;
+	Two  ow = new  Two( );  ow.game( ); 접근
+
+3. 형변환
+	int = 4Byte 냉장고, double = 8Byte 코끼리
+	byte, char, boolean, long, float
+
+	double avg = 78.9;
+	int a = (int)avg;
+
+	String data = "1200";
+	int b = integer.parseInt(data)
+	int c = (int)data// 무조건 문법의 에러발생
+
+4. 반복 - for, while, do~while
+	반복횟수를 정확히 알고 있을때 for(초기; 최종조건; 증분)
+	무한루프처리 할때 while(true) {조건주어서 탈출 = break}
+	조건상관없이 최소한번 반복 do{처리} while{조건}
+	반복문 탈출 break, 다시 반복문으로 복귀 continue
+	보조제어문 - break, continue; = 단독 사용불가
+
+6. 연산 - 산술, 논리, 다항, 삼항연산, 대입연산, bit
+	단항식 int a = 0;
+		a = a + 1;
+		a++; 단항식 처리 후 나중에 1증가
+		++a; 단항식 1씩 증가 후 나중에처리
+
+	for(int a = 0; a < 10; a++) {}
+
+	삼항식 자바, 안드로이드, c, c++ 동일함
+		String msg = "안내문";
+		if(avg > 70) {msg = "합격";}
+		else{msg = "재시험";}
+
+		String msg = (avg >= 70) ? "합격" : "재시험";
+
+	논리
+		int kor = 90, eng = 40, sum = 0;
+		double avg = 0.0;
+		sum = kor + eng;
+		avg = (double)sum/2;
+
+		if(avg >= 70 && kor >= 60 && eng >=60){} //셋다 충족할시
+		if(avg >= 70 || kor >= 60 || eng >=60){} //셋중에 하나만 충족할때
+
+7. 상수 = 변하지 않는 값 =  고정 = filnal키워드 명시
+	ex>
+	public class Two {
+		private int password = 1234; // 필드 = field = 멤버필드 = 전역번수
+		public static void main(String[] args) {
+			final int SIZE = 200; //상수라서 아래문장에서 값 변경하면 에러
+			int kor = 95; //지역변수 = local variable
+			//자바에서 지역변수는 초기화해주는 것 이 좋아요
+			//지역변수, 필드등등 값 변경이 얼마든지 가능해요
+			kor = 45; //값 변경
+			SIZE = 120; //값 변경하면 에러
+		}//main END
+	}//class END

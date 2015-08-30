@@ -1,0 +1,25 @@
+class Two {//일반클래스
+	public static void main(String[] args) {//static 정적함수
+		star()함수/nemo()함수 호출
+	}
+	public void star() {중첩for별찍기}//Non-static일반함수
+	public static void nemo() {for #찍기}//static정적함수
+}//class END
+
+abstract class Three {//추상클래스 abstract키워드
+	//추상메소드가 하나라도 있으면 자동 추상클래스입니다.
+	public abstract void study();//함수선언만 = 추상메소드
+	public String book() {return "몽블랑";}//Non-static일반함수
+	public static void nemo() {for#찍기}//static정적함수
+	public void star() {중첩for별찍기}//Non-static일반함수
+}//class END
+
+
+//추상메소드만으로 구성된 것
+interface Game {//인터페이스 = 쇼핑목록 = 명세표
+	//추상메소드로만 구성, abstract키워드 생략가능
+	//인터페이스상속받으면 반드시 재정의 = OverRiding
+	public abstract void android();//추상메소드
+	public abstract int price();//추상메소드
+	public abstract Stirng book();//추상메소드
+}//class END

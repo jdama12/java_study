@@ -1,0 +1,84 @@
+
+1. static키워드=정적 
+자동으로 메모리에 로드되는 함수=메소드 main함수는
+반드시 꼭  static키워드 있어야 합니다
+
+static=기관사=기장=버스운전사
+static아닌함수,필드를 Non-static=일반
+Non-static=학생=승객=지하철이용하는 우리들 
+static키워드가 있으면 클래스이름.메소드( ); 직접접근
+
+2. new연산자는  클래스를 개체화시켜 동적할당
+동적할당은 실행중에 메모리heap영역에 할당
+class Two {  public void game( ){ 70라인기술}  }
+class User {  Two클래스에 있는 game( )함수호출 }
+
+PDF 2장 34페이지 class  KeyboardInput2{ 코드기술 }
+ Scanner  stdIn = new Scanner(System.in) ;
+ Two  ow = new  Two( );  ow.game( ); 접근
+
+3. 형변환
+   int=>4Byte냉장고,  double=>8Byte=코끼리
+   byte, char, boolean,  long, float
+  
+   double   avg = 78.9 ;
+   int a = (int)avg; 
+
+  String data = "1200" ;
+  int b = Integer.parseInt(data); 
+  
+4. 반복 
+   반복횟수를 정확히 알고 있을때 for(초기; 최종조건;증분)
+   무한루프처리 할때 while(true) { }
+   조건상관없이 최소한번 반복 do{  처리 } while(조건);
+   반복문 탈출 break, 다시반복문으로 복귀 continue
+
+5. 제어 => if, switch
+  if(조건){  }
+  if(조건){  } else { }
+  if(조건){  } else  if(조건){ }  else  if(조건){ }  else { }
+
+  switch( avg ){  //switch제어문에서 double형에러
+       case  85:  grade='B';   break ;
+       case  87:  grade='B' ;  break ;
+       default:   grade='F'; ; 
+   }
+
+6. 연산 - 산술, 논리, 단항, 삼항연산, 대입연산, bit
+    단항식  int a=0 ;  
+              a++;  1씩증가 처리후 나중에 증가
+              ++a;  1씩증가 먼저증가후 나중처리
+	 a = a+1 ;
+     for(int a=0; a<10; a++){ }
+
+   삼항식  자바, 안드로이드, C, C++동일함
+     String  msg="안내문" ;
+     if( avg > 70) { msg="합격"; }
+     else { msg ="재시험" ; }
+   
+    String msg = (avg>70) ?  "합격" : "재시험" ;
+
+7. 상수=변하는 않는값=고정=final키워드명시 
+public  class  Two { 
+   private  int password=1234; //필드=field=멤버필드
+   public static void main(String[ ] args) {
+      final int SIZE = 200 ; 상수라서 아래문장에서 값변경하면에러
+      int kor=95; //지역변수=local variable
+      //자바에서 지역변수는 초기화해주는것이 좋아요
+      //지역변수, 필드등등 값변경이 얼마든지 가능해요 
+      kor=45; 값변경
+      SIZE=120; 값변경하면에러
+   }//main end
+}//class END
+
+
+
+
+
+
+
+
+
+
+ 
+ 
